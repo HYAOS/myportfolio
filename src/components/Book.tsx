@@ -1332,12 +1332,7 @@ function Book({ reducedMotion }: BookProps) {
       return;
     }
 
-    const targetSpread =
-      flipSide === "right"
-        ? rightPageIndex
-        : flipSide === "left"
-        ? leftPageIndex
-        : null;
+    const targetSpread = flipSide === "right" ? rightPageIndex : leftPageIndex;
     const sheet = turningSheetRef.current;
     if (!sheet) {
       return;
@@ -1610,7 +1605,6 @@ function Book({ reducedMotion }: BookProps) {
         <div className="book-geometry">
         <CoverClosed
           title="Portfolio Book"
-          subtitle="Senior Front-End Developer"
           onOpened={handleCoverOpened}
           onClosed={handleCoverClosed}
           isOpening={isOpening}
@@ -1804,3 +1798,5 @@ function Book({ reducedMotion }: BookProps) {
 }
 
 export default memo(Book);
+
+

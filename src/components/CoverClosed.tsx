@@ -4,7 +4,6 @@ const COVER_OPEN_DURATION = 900;
 
 type CoverClosedProps = {
   title: string;
-  subtitle: string;
   onOpened: () => void;
   onClosed: () => void;
   isOpening: boolean;
@@ -13,7 +12,6 @@ type CoverClosedProps = {
 
 export default function CoverClosed({
   title,
-  subtitle,
   onOpened,
   onClosed,
   isOpening,
@@ -104,3 +102,4 @@ export default function CoverClosed({
     </div>
   );
 }
+

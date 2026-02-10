@@ -130,9 +130,15 @@ export default function Page({
           <p>{page.body}</p>
           {page.list ? (
             <ul>
-              {page.list.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
+              {page.list.map((item) => {
+                const isHeading =
+                  item === "Video Production" ||                  item === "Tools";
+                return (
+                  <li key={item} className={isHeading ? "list-heading" : undefined}>
+                    {item}
+                  </li>
+                );
+              })}
             </ul>
           ) : null}
         </div>
@@ -199,3 +205,7 @@ export default function Page({
     </div>
   );
 }
+
+
+
+

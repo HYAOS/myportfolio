@@ -1395,6 +1395,14 @@ html[data-theme="dark"] .cover-endpaper {
   left: 0;
   top: 0.5em;
 }
+.page-text ul li.list-heading {
+  padding-left: 0;
+  font-weight: 600;
+}
+
+.page-text ul li.list-heading::before {
+  content: none;
+}
 
 .page-text p,
 .page-contact p {
@@ -1930,3 +1938,4 @@ html[data-theme="dark"] .playlist-skeleton-row {
     animation: none;
   }
 }
+

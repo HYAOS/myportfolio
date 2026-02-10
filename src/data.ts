@@ -58,6 +58,7 @@ export type PageContent =
       alt: string;
       caption?: string;
     }
+
   | {
       kind: "contact";
       title: string;
@@ -84,6 +85,8 @@ const page5PhotoUrl = new URL("../page/mika.jpg", import.meta.url).href;
 const page6PhotoUrl = new URL("../page/mika2.jpg", import.meta.url).href;
 const page9PhotoUrl = new URL("../page/mika3.jpg", import.meta.url).href;
 const page10PhotoUrl = new URL("../page/mika4.png", import.meta.url).href;
+const page13PhotoUrl = new URL("../page/mikaorig.png", import.meta.url).href;
+const page14PhotoUrl = new URL("../page/mikakr.png", import.meta.url).href;
 
 const projects: Project[] = [
   {
@@ -179,6 +182,7 @@ const projects: Project[] = [
 ];
 
 export const PLAYLIST_ID = "PLVvfpDWqIyqhR817dgayQqSTX0SvQNlcs";
+
 
 export const bookData: { spreads: Spread[]; projects: Project[] } = {
   projects,
@@ -200,9 +204,9 @@ export const bookData: { spreads: Spread[]; projects: Project[] } = {
           { label: "Projects II", spreadIndex: 3 },
           { label: "Projects III", spreadIndex: 4 },
           { label: "Projects IV", spreadIndex: 5 },
-          { label: "Video Playlist", spreadIndex: 6 },
-          { label: "Process", spreadIndex: 7 },
-          { label: "Contact", spreadIndex: 7 },
+          { label: "Video Playlist", spreadIndex: 7 },
+          { label: "Process", spreadIndex: 8 },
+          { label: "Contact", spreadIndex: 8 },
         ],
       },
     },
@@ -276,6 +280,21 @@ export const bookData: { spreads: Spread[]; projects: Project[] } = {
       right: { kind: "project", project: projects[10] },
     },
     {
+      id: "projects-5",
+      left: {
+        kind: "image",
+        src: page13PhotoUrl,
+        alt: "Mika original photo",
+        caption: "Original",
+      },
+      right: {
+        kind: "image",
+        src: page14PhotoUrl,
+        alt: "Mika processed photo",
+        caption: "Edited",
+      },
+    },
+    {
       id: "playlist",
       left: {
         kind: "playlist",
@@ -284,14 +303,15 @@ export const bookData: { spreads: Spread[]; projects: Project[] } = {
         playlistId: PLAYLIST_ID,
       },
       right: {
-        kind: "text",
-        title: "Playlist Notes",
-        body:
-          "A focused set of build breakdowns, UI motion studies, and launch demos. The playlist uses a curated, static lineup.",
-        list: [
-          "Product walkthroughs",
-          "Interaction prototypes",
-          "Performance and QA notes",
+        kind: "contact",
+        title: "Contact",
+        body: "Available for collaborations, audits, and product UI strategy.",
+        links: [          { label: "Phone", href: "tel:+4793950825" },
+          { label: "Instagram", href: "https://www.instagram.com/drow_ninginlife?igsh=MW01YWEzcG1uNWZybA%3D%3D&utm_source=qr" },
+          { label: "TikTok", href: "https://www.tiktok.com/@_h.yaos_?_r=1&_t=ZS-93nfShsV2hO" },
+          { label: "Email", href: "mailto:hello@example.com" },
+
+
         ],
       },
     },
@@ -309,15 +329,33 @@ export const bookData: { spreads: Spread[]; projects: Project[] } = {
         ],
       },
       right: {
-        kind: "contact",
-        title: "Contact",
-        body: "Available for collaborations, audits, and product UI strategy.",
-        links: [
-          { label: "Email", href: "mailto:hello@example.com" },
-          { label: "Portfolio", href: "https://example.com" },
-          { label: "YouTube", href: "https://www.youtube.com" },
+        kind: "text",
+        title: "Playlist Notes",
+        body:
+          "A focused set of build breakdowns, UI motion studies, and launch demos. The playlist uses a curated, static lineup.",
+        list: [
+          "Product walkthroughs",
+          "Interaction prototypes",
+          "Performance and QA notes",
         ],
       },
     },
   ],
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
